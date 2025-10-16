@@ -23,7 +23,7 @@ export default function About() {
           <a href="#" rel="noreferrer">
             <img
               className="about-image"
-              src="/images/about/early_birb.png"
+              src="/images/brand/early_birb.png"
               alt="Sam Sunrise — Founder"
             />
           </a>
@@ -60,7 +60,7 @@ export default function About() {
           <a href="#" nClick={e => e.preventDefault()} rel="noreferrer">
             <img
               className="about-image"
-              src="/images/about/early_birb.png"
+              src="/images/brand/early_birb.png"
               alt="Jo Jonquil — Design Lead"
             />
           </a>
@@ -94,7 +94,7 @@ export default function About() {
           <a href="#" nClick={e => e.preventDefault()} rel="noreferrer">
             <img
               className="about-image"
-              src="/images/about/early_birb.png"
+              src="/images/brand/early_birb.png"
               alt="Ravi Roost — Platform Engineer"
             />
           </a>
