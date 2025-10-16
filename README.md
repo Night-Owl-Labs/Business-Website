@@ -29,7 +29,7 @@ A dynamic and versatile static business website, expertly crafted using Gatsby f
 
 <div align="center">
     <a href="https://bizwebsite.netlify.app" target="_blank">
-        <img src="./docs/images/demo.png" style="width: 80%;"/>
+        <img src="./docs/images/demo.png" style="width: 100%;"/>
     </a>
     <br>
     <i>Fully customizable business website.</i>
