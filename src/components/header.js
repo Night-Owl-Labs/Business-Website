@@ -11,15 +11,15 @@ const Header = () => {
         <div id="headlogo">
           <Link to="/">
             <img
-              src="/images/company/nol-banner_large.png"
-              alt="Night Owl Labs"
-              title="Night Owl Labs"
+              src="/images/brand/banner_large.png"
+              alt="Early Bird Labs"
+              title="Early Bird Labs"
               className="desktop-logo"
             />
             <img
-              src="/images/company/nol-banner_small.png"
-              alt="Night Owl Labs"
-              title="Night Owl Labs"
+              src="/images/brand/banner_small.png"
+              alt="Early Bird Labs"
+              title="Early Bird Labs"
               className="mobile-logo"
             />
           </Link>
@@ -49,16 +49,6 @@ const Header = () => {
             <li>
               <Link to="/services" activeClassName="active">
                 Services
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" activeClassName="active">
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link to="/faq" activeClassName="active">
-                FAQ
               </Link>
             </li>
             <li>

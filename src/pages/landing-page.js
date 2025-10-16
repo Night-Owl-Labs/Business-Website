@@ -9,9 +9,9 @@ export default function LandingPage() {
         <Link to="/">
           <br />
           <img
-            src="/images/landing/landing-banner.png"
-            alt="Night Owl Labs"
-            title="Night Owl Labs"
+            src="/images/brand/banner_social.png"
+            alt="Early Bird Labs"
+            title="Early Bird Labs"
             className="landing-logo"
           />
         </Link>

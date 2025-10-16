@@ -1,6 +1,6 @@
 <!-- Begin README -->
 
-[![App Logo](docs/images/banner_large.png)](https://nightowllabs.io)
+[![App Logo](docs/images/banner_large.png)](https://bizwebsite.netlify.app)
 
 <p align="center">
     <a href="https://www.gatsbyjs.com/"><img src="https://img.shields.io/badge/Gatsby-5.12.4-663399?style=for-the-badge&logo=gatsby" alt="Gatsby Badge" /></a>
@@ -16,45 +16,23 @@
 
 ---------------
 
-<h1 align="center">🦉 💼 Business Website</h1>
+<h1 align="center">💼 Business Website 🏢</h1>
 
 <p align="center">
-    <a href="https://app.netlify.com/sites/nightowllabs/deploys"><img src="https://api.netlify.com/api/v1/badges/38516967-7780-400e-bc3a-2807a946596c/deploy-status" alt="Netlify Status" /></a>
+    <a href="https://app.netlify.com/projects/bizwebsite/deploys"><img src="https://api.netlify.com/api/v1/badges/57cb5e0d-2e37-46a2-a90a-1e97f27a887c/deploy-status" alt="Netlify Status" /></a>
 </p>
 
 A dynamic and versatile static business website, expertly crafted using Gatsby for optimal performance and hosted on Netlify for reliability. This website comes with a multitude of menu options and features, catering to diverse business needs. Additionally, it includes a dedicated section for a product or app landing page, perfect for showcasing new releases, features, and driving user engagement.
-- Visit the application to see it in action [here](https://nightowllabs.io).
+
+- This site uses a fictional company, **Early Bird Labs**, a playful nod (and daytime alter ego) to our real company, **[Night Owl Labs](https://nightowllabs.io)**.
+- Visit the application to see it in action [here](https://bizwebsite.netlify.app).
 
 <div align="center">
-    <a href="https://nightowllabs.io" target="_blank">
-        <img src="./docs/images/demo_1.png" style="width: 60%;"/>
+    <a href="https://bizwebsite.netlify.app" target="_blank">
+        <img src="./docs/images/demo.png" style="width: 60%;"/>
     </a>
     <br>
     <i>Fully customizable business website.</i>
-</div>
-<br>
-<div align="center">
-    <a href="https://reciperesizer.com" target="_blank">
-        <img src="./docs/images/demo_2.png" style="width: 60%;"/>
-    </a>
-    <br>
-    <i>Optionally, you can also use it as a product or app landing page.</i>
-</div>
-<br>
-<div align="center">
-    <a href="https://beeheard.com" target="_blank">
-        <img src="./docs/images/demo_3.png" style="width: 60%;"/>
-    </a>
-    <br>
-    <i>Easily change the color scheme to match your brand.</i>
-</div>
-<br>
-<div align="center">
-    <a href="https://prgoptimized.netlify.app" target="_blank">
-        <img src="./docs/images/demo_4.png" style="width: 60%;"/>
-    </a>
-    <br>
-    <i>Create custom website pages to showcase your company or product.</i>
 </div>
 
 ---------------
@@ -68,10 +46,13 @@ A dynamic and versatile static business website, expertly crafted using Gatsby f
     - [Building and Running for Production](#building-and-running-for-production)
     - [Configuration](#configuration)
     - [Customization](#customization)
+- [Brand](#brand)
+    - [Mascot](#mascot)
+    - [Color Palette](#color-palette)
+    - [Typefaces](#typefaces)
 - [What's Inside?](#whats-inside)
 - [Closing](#closing)
 - [What's Next?](#whats-next)
-- [Project](#project)
 - [Guidelines for Forking This Project](#guidelines-for-forking-this-project)
 - [Contributing](#contributing)
 - [Resources](#resources)
@@ -174,9 +155,40 @@ Below is a list of the main files you can customize to your liking:
     - Make sure you also update the `src/components/header.js` file to include your new pages in the navigation menu.
 9. In the root directory, you can also edit the `gatsby-config.js` file to change the site metadata and other settings.
 10. Also in the root directory, you will find another directory called `static`. This directory contains the `fonts` and `images` folders. You can use the `fonts` folder to store your custom fonts and the `images` folder to store your custom images used throughout the site.
+11. Be sure to update your `<a href="#">` link tags to actual endpoints, they're set to dead ends in the site demo.
 
 > [!IMPORTANT]
 > Please follow the [Guidelines for Forking This Project](#guidelines-for-forking-this-project) below if you plan on forking and using this project for your own purposes.
+
+### Brand
+
+**Early Bird Labs** brand information.
+
+## Mascot
+
+"Early Birb"
+
+<img src="docs/images/early_birb.png" alt="Mascot" width="25%"/>
+
+## Color Palette
+
+| Color Name     | Swatch                                                   | Hex Code  | Usage                      |
+| -------------- | -------------------------------------------------------- | --------- | -------------------------- |
+| Sky Blue       | ![#8ED8F8](https://placehold.co/20x20/8ED8F8/8ED8F8.png) | `#8ED8F8` | Day Sky Background         |
+| Sun Yellow     | ![#FFD94A](https://placehold.co/20x20/FFD94A/FFD94A.png) | `#FFD94A` | Sun / Logo Accent          |
+| Sunrise Orange | ![#F48C06](https://placehold.co/20x20/F48C06/F48C06.png) | `#F48C06` | Bird Body / Highlight      |
+| Warm Red       | ![#E63946](https://placehold.co/20x20/E63946/E63946.png) | `#E63946` | Bird Details / Buttons     |
+| Light Green    | ![#81C784](https://placehold.co/20x20/81C784/81C784.png) | `#81C784` | Tree Tops                  |
+| Forest Green   | ![#2E7D32](https://placehold.co/20x20/2E7D32/2E7D32.png) | `#2E7D32` | Tree Base / Footer         |
+| Soft Cream     | ![#FFF8E1](https://placehold.co/20x20/FFF8E1/FFF8E1.png) | `#FFF8E1` | Background / Section Fills |
+| Deep Blue      | ![#1A237E](https://placehold.co/20x20/1A237E/1A237E.png) | `#1A237E` | Text / Accent Contrast     |
+
+### Typefaces
+
+| Typeface  | Style / Usage                                    | Link                                                                         |
+| --------- | ------------------------------------------------ | ---------------------------------------------------------------------------- |
+| **Inter** | Primary typeface for body text, UI, and headings | [Inter on Google Fonts](https://fonts.google.com/specimen/Inter?query=Inter) |
+| **Silom** | Accent / display typeface for logos or headings  | — *(System font — included on macOS)*                                        |
 
 ## What's Inside?
 
@@ -200,12 +212,10 @@ Business-Website
 │  │  ├─ about.js # About page
 │  │  ├─ company.js # Company page
 │  │  ├─ contact.js # Contact page
-│  │  ├─ faq.js # FAQ page
 │  │  ├─ home.js # Home page
 │  │  ├─ index.js # Index page
 │  │  ├─ landing-page.js # Landing page
 │  │  ├─ products.js # Products page
-│  │  ├─ projects.js # Projects page
 │  │  ├─ services.js # Services page
 │  │  └─ using-ssr.js # Using SSR page
 │  ├─ templates # Templates folder
@@ -213,14 +223,8 @@ Business-Website
 │  ├─ static # Static folder
 │  │  ├─ fonts # Fonts folder
 │  │  └─ images # Images folder
-│  │     ├─ about # About images folder
-│  │     ├─ company # Company images folder
-│  │     ├─ landing # Landing images folder
-│  │     ├─ products # Products images folder
-│  │     └─ projects # Using SSR images folder
-│  │        ├─ banners # App Banners images folder
-│  │        └─ icons # App Icons images folder
-│  ├─ styles # Styles folder
+│  │     └─brand # Brand image folder
+│  └─ styles # Styles folder
 ├─ .gitignore # Git ignore file
 ├─ .github # GitHub folder       
 ├─ .prettierignore # Prettier ignore file
@@ -246,24 +250,18 @@ If you have any questions or suggestions, please feel free to reach out to me.
 I'm looking forward to seeing how this project evolves over time and how it can help others with their GitHub Portfolio.
 > Please reference the [CHANGELOG](.github/CHANGELOG.md) file in this repository for more details.
 
-## Project
-
-Please reference the [GitHub Project](https://github.com/users/scottgriv/projects/10) tab inside this repository to get a good understanding of where I'm currently at with the overall project.
-
-- Issues and Enhancements will also be tracked there as well.
-
 ## Guidelines for Forking This Project
 
 If you fork this project, please adhere to the following guidelines:
 
 - **Rename the Products**: Please change any references to [Your Product Name] to a name of your choosing that does not include the projects referenced on this website.
-- **Change Company Information**: If your fork includes references to [Your Company Name], please replace these with your own information or generic placeholders. Do not reference "Night Owl Labs, LLC."
-- **Change the Copyright Information**: Be sure to change the copyright reference to "Night Owl Labs, LLC." in the `footer.js` file.
-- **Change Designs and Logos**: Be sure to change the logos and designs that originally referenced Night Owl Labs.
+- **Change Company Information**: If your fork includes references to [Your Company Name], please replace these with your own information or generic placeholders.
+- **Change the Copyright Information**: Be sure to change the copyright reference in the `footer.js` file.
+- **Change Designs and Logos**: Be sure to change the logos and designs that originally referenced Early Bird Labs.
 - **Change Site Metadata**: Change the website meta data in the `siteMetadata` tree located in the `seo.js` file to fit your company or product.
-- **Change Contact Information**: Change any contact email references to `@nightowllabs.io` or hyperlinks to Night Owl Labs.
-- **Utilize Search in your IDE**: Do a mass search for "Night Owl Labs" and its products to ensure you have removed any references.
-- **Compare Your Website with the Original**: The site is actively being hosted at [nightowllabs.io](https://nightowllabs.io). After you deploy your website, check it against the original website to ensure nothing looks similar. Your site should be structured the same but be almost completely different content wise.
+- **Change Contact Information**: Change any contact email references to `@example.com` or hyperlinks to Early Bird Labs.
+- **Utilize Search in your IDE**: Do a mass search for "Early Bird Labs" and its products to ensure you have removed any references.
+- **Compare Your Website with the Original**: The site is actively being hosted at [https://bizwebsite.netlify.app](https://bizwebsite.netlify.app). After you deploy your website, check it against the original website to ensure nothing looks similar. Your site should be structured the same but be almost completely different content wise.
 
 This project serves as a great template for a business and/or product page, but it is important to do the work in order to update it and remove the original references to the original company/product/author.
 

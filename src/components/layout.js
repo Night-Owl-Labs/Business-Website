@@ -86,8 +86,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Seo
-        title="Night Owl Labs"
-        description="Software Development, Design, Consulting, Education"
+        title="Early Bird Labs"
+        description="Bright Ideas, Built Beautifully"
       />
       <div id="pagecontent">
         <header>

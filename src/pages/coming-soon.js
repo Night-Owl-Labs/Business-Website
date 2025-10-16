@@ -25,7 +25,7 @@ export default function ComingSoon() {
         />
         <h2>Whoa!<br />Are you as excited as we are for our new software drop?!</h2>
         <h3>Let's be honest, probably not...<br />Regardless! Check back soon to see what it is!</h3>
-        <p><i><b>- Team Night Owl Labs</b></i></p>
+        <p><i><b>- Team Early Bird Labs</b></i></p>
         <p>In the meantime, explore our <a className="coming-soon-link" href="/products">
          current product list!
         </a></p>

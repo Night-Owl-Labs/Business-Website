@@ -5,81 +5,69 @@ export default function Company() {
   return (
     <Layout>
       <h1 className="title-header-large">Company</h1>
+
       <p>
-        At <strong>Night Owl Labs</strong>, we're more than just a software
-        development firm. We're a team of creators, thinkers, and innovators.
-        While we're passionate about technology, our true commitment is to the
-        experiences and memories that technology can facilitate.
+        At <strong>Early Bird Labs</strong>, we believe bright ideas deserve an
+        early start. We’re a small, independent software studio focused on
+        creating tools that feel good to use — practical, approachable, and just
+        a little bit joyful. While our roots are in technology, our purpose is
+        in empowering creativity, learning, and connection through the products
+        we build.
       </p>
+
       <p>
-        We believe that the best products come from a place of understanding and
-        purpose. That's why we dive deep into the needs and aspirations of our
-        clients and their users to deliver solutions that not only meet but
-        exceed expectations.
+        We approach every project with curiosity and care. Our philosophy is
+        simple: understand people first, build technology second. This mindset
+        keeps our work grounded, ensuring that what we make isn’t just
+        functional — it’s meaningful.
       </p>
+
       <hr />
-      <h2>Our History</h2>
+
+      <h2>Our Story</h2>
       <p>
-        <b>Night Owl Labs</b> was founded in 2014 by Scott Grivner and Daniel
-        Volovic. Devin Olshefski was brought on as a partner in 2016. The three
-        of them have been friends since grade school, and have always had a
-        passion for business and technology. They started the company with the
-        goal of creating a software development firm that would be able to
-        create products that would resonate with users, and bring a touch of
-        excitement to the mundane. Almost a decade later, they have been able to
-        do just that.
+        <strong>Early Bird Labs</strong> was founded in 2025 by a small group of
+        developers and designers who wanted to bring warmth and imagination to
+        modern software. What started as a weekend experiment soon became a
+        creative hub for open-source projects, small client collaborations, and
+        community contributions. Nearly a decade later, our flock continues to
+        grow — still guided by the same values of craftsmanship and curiosity
+        that started it all.
       </p>
+
       <h2>Our Vision</h2>
       <blockquote className="block-quote">
         <p>
-          "Our vision is to revolutionize how people interact with technology,
-          making every engagement an opportunity for joy and wonder. We aim to
-          set new standards in user experience, crafting products that aren’t
-          merely tools but become integral, cherished parts of daily life."
+          “To create software that wakes people up — not with noise, but with
+          possibility. We aim to make digital experiences that feel intuitive,
+          purposeful, and human.”
         </p>
       </blockquote>
+
       <h2>Our Mission</h2>
       <blockquote className="block-quote">
         <p>
-          "Our mission is to innovate and elevate everyday interactions through
-          our products, ensuring that every user experience is imbued with
-          creativity, joy, and simplicity. We are dedicated to designing
-          solutions that resonate with our users, bringing a touch of excitement
-          to the mundane and making the ordinary extraordinary."
+          “We design and build software that inspires creativity, simplifies
+          complexity, and brings a sense of calm focus to the start of your
+          day. Whether it’s an app, a tool, or a system, our mission is to help
+          people do their best work with clarity and confidence.”
         </p>
       </blockquote>
-      <h2>Words from our Founder</h2>
-      <blockquote className="block-quote">
-        <p>
-          "With the upcoming AI revolution at our doorstep, NOL is positioned to
-          be a leader in the field of software development. We have a unique
-          ability that combines cutting edge technology with a memorable user
-          experience. We believe combining both of these aspects is the key to
-          creating a successful product that will stand above the rest. AI may
-          be able to code and design, but it can't combine the two to create a
-          product that will resonate with users. That's where we come in. We are
-          the bridge between the two, and I believe embracing AI as a tool,
-          which is all it currently is, will be the key to our success."
-          <br />
-          <br />
-          -Scott Grivner, Founder and CEO of Night Owl Labs.
-        </p>
-      </blockquote>
+
       <hr />
+
       <p>
-        Interested in learning more about how we work or want to discuss a
-        project?
+        Want to collaborate or learn more about what we’re building?
       </p>
       <p>
-        Feel free to{" "}
         <a className="regular-link" href="/contact">
-          Contact
+          Get in touch
         </a>{" "}
-        us, or take a look at our{" "}
-        <a className="regular-link" href="/projects">
-          Projects
+        with us, or browse our{" "}
+        <a className="regular-link" href="/products">
+          Products
         </a>{" "}
-        to see the dreams we've turned into reality.
+        to see how we’re helping others bring their ideas to life.
       </p>
     </Layout>
   )

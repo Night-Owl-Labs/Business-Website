@@ -1,45 +1,36 @@
 /* CSS Style Sheet for the layout of the website */
 
-/* Import Tally Text font */
+/* Import Inter font */
 /* Regular style */
 @font-face {
-  font-family: "Tally-Text";
-  src: url("/fonts/Tally-Text/Tally-Text-Bold.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Import Roboto font */
-/* Regular style */
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter_18pt-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 /* Regular italic style */
 @font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter_18pt-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 /* Bold style */
 @font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter_18pt-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 body {
-  font-family: "Roboto", Arial, sans-serif; /* Use custom font */
+  font-family: "Inter", Arial, sans-serif; /* Use custom font */
   font-weight: 400; /* This will use the regular font */
   font-size: 20px; /* Set default font size */
-  background-color: #140f3d;
-  color: white;
+  background-color: #8ED8F8;
+  color: black;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -54,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", Arial, sans-serif; /* Use custom font */
+  font-family: "Inter", Arial, sans-serif; /* Use custom font */
 }
 
 .description-container h3 {
@@ -67,15 +58,15 @@ h6 {
 }
 
 footer {
-  font-family: "Roboto", Arial, sans-serif; /* Use custom font */
+  font-family: "Inter", Arial, sans-serif; /* Use custom font */
 }
 
 a {
-  color: #fcdb3a; /* Yellow links */
+  color: #F48C06; /* Yellow links */
 }
 
 .coming-soon-container {
-  background-color: #fcdb3a; /* Solid yellow background */
+  background-color: #F48C06; /* Solid yellow background */
   color: #333; /* Text color - adjust as needed */
   text-align: center; /* Center align the content */
   min-height: 85vh; /* Ensure it covers the whole viewport height */
@@ -135,11 +126,11 @@ a {
   margin-bottom: 0;
 }
 .landing-subtitle {
-  color: #fcdb3a;
+  color: #F48C06;
 }
 
 #pagecontent {
-  background-color: black;
+  background-color: #FFF8E1;
   padding: 0;
   border-radius: 10px;
   text-align: center;
@@ -169,11 +160,11 @@ a {
 
 /* Main menu navigation tab styles */
 #menutabs a {
-  font-family: "Roboto", Arial, sans-serif; /* Use custom font */
+  font-family: "Inter", Arial, sans-serif; /* Use custom font */
   font-weight: 700; /* This will use the bold font */
   font-size: 16px; /* Set default font size */
-  background-color: #fcdb3a;
-  color: black;
+  background-color: #F48C06;
+  color: white;
   padding: 8px 12px;
   text-decoration: none;
   border-radius: 4px; /* Rounded corners */
@@ -182,17 +173,18 @@ a {
 
 /* This is to ensure that hover links retain the intended style */
 #menutabs a:hover {
-  background-color: white;
+  background-color: #FFD94A;
   color: black;
 }
 
 /* This is to ensure that visited links retain the intended style */
 #menutabs a:visited {
-  color: black;
+  color: white;
 }
 
 /* Specific rule for visited links when hovered */
 #menutabs a:visited:hover {
+    background-color: #FFD94A;
   color: black;
 }
 
@@ -200,7 +192,7 @@ a {
 #menutabs a.active,
 #menutabs a.active:hover,
 #menutabs a.active:visited {
-  background-color: #005e1f;
+  background-color: #81C784;
   color: white;
 }
 
@@ -262,7 +254,7 @@ a {
 }
 
 #github-star {
-  color: #fcdb3a;
+  color: #F48C06;
 }
 
 #github-fork {
@@ -303,14 +295,14 @@ a {
 
 .social-links a,
 .social-links-footer a {
-  color: #fff; /* Icon color */
+  color: #E63946; /* Icon color */
   font-size: 24px; /* Icon size */
   transition: transform 0.3s ease; /* Smooth transition for the transform */
 }
 
 .social-links a:hover,
 .social-links-footer a:hover {
-  color: #005e1f; /* Green color for links hover effect, change as needed */
+  color: #1A237E; /* Green color for links hover effect, change as needed */
   transform: translateY(-5px); /* Moves the button up */
 }
 
@@ -329,7 +321,7 @@ a {
 }
 
 .social-links-owl a:hover {
-  color: #005e1f; /* Green color for links hover effect, change as needed */
+  color: #FFD94A; /* Green color for links hover effect, change as needed */
   transform: translateY(-5px); /* Moves the button up */
 }
 
@@ -368,8 +360,8 @@ a {
 }
 
 .sidebar button {
-  background-color: #fcdb3a;
-  color: black;
+  background-color: #F48C06;
+  color: white;
   padding: 8px 12px;
   text-decoration: none;
   border-radius: 4px;
@@ -386,32 +378,21 @@ a {
 }
 
 .sidebar h3 {
-  font-family: "Roboto", Arial, sans-serif; /* Use custom font */
+  font-family: "Inter", Arial, sans-serif; /* Use custom font */
   font-weight: 700; /* This will use the bold font */
   font-size: 15px; /* Set default font size */
 }
 
 /* This is to ensure that hover links retain the intended style */
 .sidebar button:hover {
-  background-color: white;
-  color: black;
-}
-
-/* This is to ensure that visited links retain the intended style */
-.sidebar button:visited {
-  color: black;
-}
-
-/* Specific rule for visited links when hovered */
-.sidebar button:visited:hover {
+  background-color: #FFD94A;
   color: black;
 }
 
 /* Higher specificity for active links */
 .sidebar button.active,
-.sidebar button.active:hover,
-.sidebar button.active:visited {
-  background-color: #005e1f;
+.sidebar button.active:hover {
+  background-color: #81C784;
   color: white;
 }
 
@@ -425,7 +406,7 @@ a {
 }
 /* This is to ensure that hover links retain the intended style */
 .coming-soon-link:hover {
-  color: #005e1f;
+  color: #FFD94A;
 }
 
 /* This is to ensure that visited links retain the intended style */
@@ -435,22 +416,17 @@ a {
 
 /* Specific rule for visited links when hovered */
 .coming-soon-link:visited:hover {
-  color: #005e1f;
+  color: #FFD94A;
 }
 
 /* This is to ensure that hover links retain the intended style */
+
+.regular-link {
+  color: #F48C06;
+}
+
 .regular-link:hover {
-  color: #fff;
-}
-
-/* This is to ensure that visited links retain the intended style */
-.regular-link:visited {
-  color: #fcdb3a;
-}
-
-/* Specific rule for visited links when hovered */
-.regular-link:visited:hover {
-  color: #fff;
+  color: #E63946;
 }
 
 @keyframes bounce {
@@ -683,7 +659,7 @@ button:focus {
 
 /* Scrolling Popup Arrow Button */
 .scroll-to-top {
-  background: #005e1f;
+  background: #FFD94A;
   border: none;
   border-radius: 50%; /* Makes it a circle */
   padding: 0;
@@ -711,11 +687,11 @@ button:focus {
 
 .scroll-to-top i {
   font-size: 24px; /* Larger font size for the icon */
-  color: #fff;
+  color: black;
 }
 
 .block-quote {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400; /* This will use the regular weight */
   font-style: italic; /* This will use the italic style */
   color: #7f7f7f; /* Font color */
@@ -764,7 +740,7 @@ button:focus {
 }
 
 .download-button {
-  background-color: #005E1F;
+  background-color: #FFD94A;
   color: #FFFFFF;
   font-weight: bold;
   border-radius: 20px; /* Rounded corners */
@@ -795,7 +771,7 @@ button:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #FCDB3A; /* Color of the scrollbar thumb */
+  background-color: #F48C06; /* Color of the scrollbar thumb */
   border-radius: 6px; /* Roundness of the scrollbar thumb */
   border: 3px solid #000000; /* Padding around scrollbar thumb */
 }
@@ -803,7 +779,7 @@ button:focus {
 /* For Firefox */
 * {
   scrollbar-width: thin; /* Makes the scrollbar thinner */
-  scrollbar-color: #FCDB3A #000000; /* Thumb and track colors */
+  scrollbar-color: #F48C06 #000000; /* Thumb and track colors */
 }
 
 /* For Internet Explorer and Edge */

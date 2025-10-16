@@ -1,52 +1,35 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import { navigate } from "gatsby"
+import { useLocation } from "@reach/router"
 import Layout from "../components/layout"
-import Icon from "../components/icons/icon.js"
 
-const wallpapers = [
-  {
-    id: 1,
-    name: "Night Owl Labs Brand Wallpaper Collection",
-    imgSrc: "/images/products/wallpaper/demo/NOL_Wallpaper_1_Demo.png",
-    downloadLinks: {
-      desktop:
-        "/images/products/wallpaper/wallpaper_1/NOL_Wallpaper_1_Desktop.png",
-      tablet:
-        "/images/products/wallpaper/wallpaper_1/NOL_Wallpaper_1_Tablet.png",
-      phone: "/images/products/wallpaper/wallpaper_1/NOL_Wallpaper_1_Phone.png",
-    },
-  },
-  {
-    id: 2,
-    name: "Night Owl Labs Website Visitor Wallpaper Collection",
-    imgSrc: "/images/products/wallpaper/demo/NOL_Wallpaper_2_Demo.png",
-    downloadLinks: {
-      desktop:
-        "/images/products/wallpaper/wallpaper_2/NOL_Wallpaper_2_Desktop.png",
-      tablet:
-        "/images/products/wallpaper/wallpaper_2/NOL_Wallpaper_2_Tablet.png",
-      phone: "/images/products/wallpaper/wallpaper_2/NOL_Wallpaper_2_Phone.png",
-    },
-  },
-]
+// One placeholder image for all product cards
+const PLACEHOLDER_IMG = "/images/brand/project_placeholder.png"
 
 export default function Products() {
-  const [selectedSection, setSelectedSection] = useState("published")
+  const location = useLocation()
+  const params = new URLSearchParams(location.search)
+  const sectionFromURL = params.get("section")
+
+  const [selectedSection, setSelectedSection] = useState(sectionFromURL || "published")
+
+
+    useEffect(() => {
+    navigate(`/products?section=${selectedSection}`, { replace: true })
+  }, [selectedSection])
 
   return (
     <Layout>
       <h1 className="title-header-large">Products</h1>
       <p>
-        <b>Night Owl Labs</b> takes immense pride in creating innovative
-        software products and open source projects tailored to the evolving
-        needs of the modern world. We believe in blending functionality with
-        user-centric design to deliver experiences that are both practical and
-        memorable. Explore our range of published software products and get a
-        sneak peek into what's coming next.
+        <b>Early Bird Labs</b> builds small-but-mighty tools and open-source projects.
+        Everything here is fictional demo content for an open-source website template.
+        Explore our “published” apps, community repos, and a few extras coming soon.
       </p>
 
       <div className="products-container">
         {/* Sidebar Navigation */}
-        <div className="sidebar">
+        <nav className="sidebar" aria-label="Products Sections">
           <ul>
             <li>
               <button
@@ -72,17 +55,6 @@ export default function Products() {
             </li>
             <li>
               <button
-                className={selectedSection === "wallpaper" ? "active" : ""}
-                onClick={e => {
-                  e.preventDefault()
-                  setSelectedSection("wallpaper")
-                }}
-              >
-                <h3>Wallpaper</h3>
-              </button>
-            </li>
-            <li>
-              <button
                 className={selectedSection === "content" ? "active" : ""}
                 onClick={e => {
                   e.preventDefault()
@@ -93,692 +65,235 @@ export default function Products() {
               </button>
             </li>
           </ul>
-        </div>
+        </nav>
 
         {/* Content based on Selected Section */}
         <div className="content">
           {selectedSection === "published" && (
-            <div className="product-section">
+            <section className="product-section" aria-labelledby="published-software">
               <h2 id="published-software">Published Software</h2>
               <p>
-                {" "}
-                Our showcased published applications are a testament to our
-                innovation and capabilities. While these are our in-house
-                creations, our client projects, accessible under the{" "}
-                <a className="regular-link" href="/projects">
-                  Projects
-                </a>{" "}
-                menu, uphold the same gold standard of quality and meticulous
-                attention to detail.
+                Fictional apps that showcase our typical style and stack. Links and
+                imagery use placeholders so you can fork and fill with your own work.
               </p>
               <hr />
-              <div className="project-card">
+
+              {/* Project 1 */}
+              <article className="project-card">
                 <h3>
-                  {" "}
-                  <a
-                    className="regular-link"
-                    href="https://reciperesizer.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Recipe Resizer
+                  <a className="regular-link" href="#" onClick={e => e.preventDefault()}>
+                    Dawn Notes
                   </a>
                 </h3>
                 <p>
-                  Recipe Resizer allows you to effortlessly resize recipe
-                  servings up or down, convert units of measure, and learn
-                  valuable culinary tips from a classically trained chef.
+                  A minimalist notes app for the first hour of your day — capture tasks,
+                  ideas, and goals before distractions. Syncs later; feels instant now.
                 </p>
-                <a
-                  href="https://reciperesizer.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href="#" onClick={e => e.preventDefault()}>
                   <img
                     className="projects-image"
-                    src="/images/products/platinum/Recipe-Resizer.png"
-                    alt="Recipe Resizer"
+                    src={PLACEHOLDER_IMG}
+                    alt="Dawn Notes — placeholder product image"
                   />
                 </a>
-                <p>
-                  <b>Category:</b> Mobile Application.
-                </p>
-                <p>
-                  <b>Technology:</b> iOS, Swift, SwiftUI, Core Data.
-                </p>
+                <p><b>Category:</b> Mobile Application</p>
+                <p><b>Technology:</b> iOS, SwiftUI, Core Data</p>
                 <div className="social-links">
-                  <a
-                    href="https://reciperesizer.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="App Store">
                     <i className="fa-brands fa-app-store-ios"></i>
                   </a>
-                  <a
-                    href="https://reciperesizer.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="External link">
                     <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
                   </a>
                 </div>
-              </div>
+              </article>
               <hr />
-              <div className="project-card">
+
+              {/* Project 2 */}
+              <article className="project-card">
                 <h3>
-                  {" "}
-                  <a
-                    className="regular-link"
-                    href="https://beeheard.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Bee Heard
-                  </a>
-                </h3>
-                <p>A next generation audio recording platform.</p>
-                <a href="https://beeheard.com" target="_blank" rel="noreferrer">
-                  <img
-                    className="projects-image"
-                    src="/images/products/platinum/Bee-Heard.png"
-                    alt="Bee Heard"
-                  />
-                </a>
-                <p>
-                  <b>Category:</b> Mobile Application.
-                </p>
-                <p>
-                  <b>Technology:</b> TBA.
-                </p>
-                <div className="social-links">
-                  <a
-                    href="https://marketplace.visualstudio.com/items?itemName=night-owl-labs.bee-heard"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Icon name="VSCode" />
-                  </a>
-                  <a
-                    href="https://beeheard.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                  </a>
-                  <a
-                    href="https://github.com/Night-Owl-Labs/Bee-Heard-Code-Memos"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-github"></i>
-                  </a>
-                  <a
-                    href="http://tsdr.uspto.gov/#caseNumber=86416016&caseSearchType=US_APPLICATION&caseType=DEFAULT&searchType=statusSearch"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fa-regular fa-registered"></i>
-                  </a>
-                </div>
-              </div>
-              <hr />
-              <div className="project-card">
-                <h3>
-                  {" "}
-                  <a
-                    className="regular-link"
-                    href="https://darkcastle.netlify.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Dark Castle Theme
+                  <a className="regular-link" href="#" onClick={e => e.preventDefault()}>
+                    Sunbeam Uploader
                   </a>
                 </h3>
                 <p>
-                  A vibrantly elegant dark theme available for multiple
-                  platforms. Inspired by the timeless beauty and mystery of
-                  medieval castles, this theme combines rich, deep colors with a
-                  clean and modern design.
+                  Drag-and-drop uploads with instant previews, signed URLs, and one-line
+                  embeds. Built for docs, blogs, and design handoffs.
                 </p>
-                <a
-                  href="https://darkcastle.netlify.app/"
-                  className="icon-container-product"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href="#" onClick={e => e.preventDefault()}>
                   <img
                     className="projects-image"
-                    src="/images/products/gold/Dark-Castle.png"
-                    alt="Dark Castle"
+                    src={PLACEHOLDER_IMG}
+                    alt="Sunbeam Uploader — placeholder product image"
                   />
                 </a>
-                <p>
-                  <b>Category:</b> Multi-Platform Theme.
-                </p>
-                <p>
-                  <b>Technology:</b> Hex, RGB, HSL.
-                </p>
+                <p><b>Category:</b> Web Application</p>
+                <p><b>Technology:</b> React, Node, S3-compatible storage</p>
                 <div className="social-links">
-                  <a
-                    href="https://marketplace.visualstudio.com/items?itemName=scottgriv.Dark-Castle"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Icon name="VSCode" />
-                  </a>
-                  <a
-                    href="https://darkcastle.netlify.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="External link">
                     <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
                   </a>
-                  <a
-                    href="https://github.com/scottgriv/Dark-Castle-Theme"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="GitHub">
                     <i className="fab fa-github"></i>
                   </a>
                 </div>
-              </div>
+              </article>
               <hr />
-            </div>
+
+              {/* Project 3 */}
+              <article className="project-card">
+                <h3>
+                  <a className="regular-link" href="#" onClick={e => e.preventDefault()}>
+                    Morning Metrics
+                  </a>
+                </h3>
+                <p>
+                  A single-screen dashboard for daily pulse checks — traffic, sales,
+                  signups, and support all in one calm view.
+                </p>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  <img
+                    className="projects-image"
+                    src={PLACEHOLDER_IMG}
+                    alt="Morning Metrics — placeholder product image"
+                  />
+                </a>
+                <p><b>Category:</b> Web Application</p>
+                <p><b>Technology:</b> Gatsby/Next, Serverless, Charts</p>
+                <div className="social-links">
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="External link">
+                    <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+                  </a>
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="GitHub">
+                    <i className="fab fa-github"></i>
+                  </a>
+                </div>
+              </article>
+              <hr />
+            </section>
           )}
 
           {selectedSection === "open-source" && (
-            <div className="product-section">
+            <section className="product-section" aria-labelledby="open-source-software">
               <h2 id="open-source-software">Open Source Software</h2>
               <p>
-                Community is integral to our ethos. At <b>Night Owl Labs</b>, we
-                actively contribute to the open-source sphere, sharing projects
-                and tools on platforms like{" "}
-                <a
-                  className="regular-link"
-                  href="https://github.com/Night-Owl-Labs"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>{" "}
-                to assist others in their tech endeavors. We also post content
-                on{" "}
-                <a
-                  className="regular-link"
-                  href="https://linkedin.com/company/nightowllabs"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
-                </a>{" "}
-                and{" "}
-                <a
-                  className="regular-link"
-                  href="https://twitter.com/night_owl_labs"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  X
-                </a>
-                . Beyond being developers, we are educators and consultants
-                dedicated to empowering others with knowledge and expertise.
-                <p>
-                  Check out our founder, Scott Grivner's{" "}
-                  <a
-                    className="regular-link"
-                    href="https://github.com/scottgriv"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>{" "}
-                  , as well.
-                </p>
+                Fictional repos that reflect our typical contributions: utilities,
+                starter kits, and design tokens. Replace links with your real GitHub org.
               </p>
               <hr />
-              <div className="project-card">
-                <h3>
-                  {" "}
-                  <a
-                    className="regular-link"
-                    href="https://github.com/Night-Owl-Labs/Software-Principles-Collection"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Software Principles Collection
-                  </a>
-                </h3>
-                <p>
-                  A growing curated collection of foundational software
-                  principles, featuring links to repositories that delve into
-                  key concepts like OOP, SOLID, and more.
-                </p>
-                <a
-                  href="https://github.com/Night-Owl-Labs/Software-Principles-Collection"
-                  className="icon-container-product"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    className="projects-image"
-                    src="/images/products/silver/Software-Principles-Collection.png"
-                    alt="Post.e"
-                  />
-                </a>
-                <p>
-                  <b>Category:</b> Software Principles, Software Concepts.
-                </p>
-                <p>
-                  <b>Technology:</b> Markdown.
-                </p>
-                <div className="social-links">
-                  <a
-                    href="https://github.com/Night-Owl-Labs/Software-Principles-Collection"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-github"></i>
-                  </a>
-                  <a
-                    href="https://medium.com/@scottgrivner/understanding-software-ilities-key-attributes-of-quality-software-d4b7fadc9bbe"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-medium"></i>
-                  </a>
-                </div>
-              </div>
-              <hr />
-              <div className="project-card">
-                <h3>
-                  {" "}
-                  <a
-                    className="regular-link"
-                    href="https://prgportfolio.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Personal Repository Guidelines (PRG)
-                  </a>
-                </h3>
-                <p>
-                  PRG is a system that transforms the way repositories are
-                  organized and presented in your GitHub Portfolio. By
-                  harnessing the power of GitHub Actions, it automatically
-                  crafts a tier-based display, neatly categorizing your
-                  repositories for enhanced clarity and impact. Beyond mere
-                  organization, it sets forth comprehensive guidelines for{" "}
-                  <span class="code-inline">READMEs</span> and overall
-                  repository structure, ensuring each project is showcased with
-                  maximum professionalism and coherence.
-                </p>
-                <a
-                  href="https://prgportfolio.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    className="projects-image"
-                    src="/images/products/gold/PRG.png"
-                    alt="Personal Repository Guidelines"
-                  />
-                </a>
-                <p>
-                  <b>Category:</b> Categorization, Guidelines, Templates,
-                  Standards, Documentation.
-                </p>
-                <p>
-                  <b>Technology:</b> Markdown, API, GitHub Actions, Jekyll,
-                  Python, DataTables.
-                </p>
-                <div className="social-links">
-                  <a
-                    href="https://prgportfolio.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Icon name="PRG" />
-                  </a>
-                  <a
-                    href="https://prgoptimized.netlify.app"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                  </a>
-                  <a
-                    href="https://github.com/scottgriv/PRG-Personal-Repository-Guidelines"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-              <hr />
-              <div className="project-card">
-                <h3>
-                  {" "}
-                  <a
-                    className="regular-link"
-                    href="https://post-e.netlify.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Post.e
-                  </a>
-                </h3>
-                <p>
-                  A fully functional, multi-programming language, "how-to-build"
-                  social media application. Create a user profile, follow other
-                  users, and post messages similar to Twitter/X. Share content
-                  with other users by attaching photos, videos, documents, and
-                  files to your Posts. Written in Swift & Objective-C for the
-                  front-end and multiple back-end languages such as PHP, Python,
-                  Node.js, Ruby, Go, Java, Rust, and Perl. Includes a back-end
-                  MySQL database, JSON interchange, and multiple out of the box
-                  APIs. Designed to teach people how to build their own social
-                  media app in mind.
-                </p>
-                <a
-                  href="https://post-e.netlify.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    className="projects-image"
-                    src="/images/products/gold/Post-e.png"
-                    alt="Post.e"
-                  />
-                </a>
-                <p>
-                  <b>Category:</b> Mobile Application.
-                </p>
-                <p>
-                  <b>Technology:</b> iOS, watchOS, UIKit, Objective-C, Swift,
-                  PHP, MySQL.
-                </p>
-                <div className="social-links">
-                  <a
-                    href="https://post-e.netlify.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                  </a>
-                  <a
-                    href="https://github.com/scottgriv/Post.e"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-              <hr />
-              <div className="project-card">
-                <h3>
-                  {" "}
-                  <a
-                    className="regular-link"
-                    href="https://scottgriv.pythonanywhere.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    River Charts
-                  </a>
-                </h3>
-                <p>
-                  A Python, Django, Plotly, and Pandas web application that
-                  visualizes river data pulled using an API from the United
-                  States Geological Survey (USGS). The application allows users
-                  to view a river's gage height and discharge based on a
-                  specific date range. The application also allows users to view
-                  plotted dates of interest on the graph to view river levels
-                  for said dates.
-                </p>
-                <a
-                  href="https://scottgriv.pythonanywhere.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    className="projects-image"
-                    src="/images/products/gold/River-Charts.png"
-                    alt="River Charts"
-                  />
-                </a>
-                <p>
-                  <b>Category:</b> Web Application.
-                </p>
-                <p>
-                  <b>Technology:</b> Python, Django, Plotly, Pandas, API.
-                </p>
-                <div className="social-links">
-                  <a
-                    href="https://scottgriv.pythonanywhere.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                  </a>
-                  <a
-                    href="https://github.com/scottgriv/River-Charts"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-              <hr />
-              <div className="project-card">
-                <h3>
-                  {" "}
-                  <a
-                    className="regular-link"
-                    href="https://scottgriv.github.io/Palm-Tree/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Palm Tree
-                  </a>
-                </h3>
-                <p>
-                  A web based CRM application with Google Business Review email
-                  request capabilities. Send marketing emails out to your
-                  customers, including emails requesting Google Business
-                  Reviews. Directly open a Review window on your Google Business
-                  page with a click of a button within the email.
-                </p>
-                <a
-                  href="https://scottgriv.github.io/Palm-Tree/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    className="projects-image"
-                    src="/images/products/gold/Palm-Tree.png"
-                    alt="Palm Tree"
-                  />
-                </a>
-                <p>
-                  <b>Category:</b> Web Application.
-                </p>
-                <p>
-                  <b>Technology:</b> JavaScript, PHP, HTML, CSS, MySQL.
-                </p>
-                <div className="social-links">
-                  <a
-                    href="https://scottgriv.github.io/Palm-Tree/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                  </a>
-                  <a
-                    href="https://github.com/scottgriv/Palm-Tree"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-              <hr />
-              <div className="project-card">
-                <h3>
-                  {" "}
-                  <a
-                    className="regular-link"
-                    href="https://launchportals.netlify.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Launch Portals
-                  </a>
-                </h3>
-                <p>
-                  Launch Portals is a dynamic web application designed for
-                  developers, marketers, and project managers to showcase and
-                  monitor their digital projects. This tool not only provides
-                  quick links to projects, repositories, websites, apps, and
-                  social media pages but also crucially displays and verifies
-                  the metadata of each link. Users can easily ensure that their
-                  projects are presented correctly across platforms by checking
-                  Open Graph tags and other metadata in real-time. Whether
-                  you're launching a new app or managing an existing portfolio,
-                  Launch Portals helps you maintain control over how your
-                  projects appear to the world, enhancing visibility and
-                  consistency across the web.
-                </p>
-                <a
-                  href="https://launchportals.netlify.app/"
-                  className="icon-container-product"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div className="projects-image-small-wrapper">
-                    <img
-                      className="projects-image"
-                      src="/images/products/gold/Launch-Portals.png"
-                      alt="Launch Portals"
-                    />
-                  </div>
-                </a>
-                <p>
-                  <b>Category:</b> Web Application.
-                </p>
-                <p>
-                  <b>Technology:</b> Gatsby.js, Netlify, React, JavaScript
-                </p>
-                <div className="social-links">
-                  <a
-                    href="https://launchportals.netlify.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                  </a>
-                  <a
-                    href="https://github.com/scottgriv/Launch-Portals"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-              <hr />
-            </div>
-          )}
 
-          {selectedSection === "wallpaper" && (
-            <div className="product-section">
-              <h2>Wallpaper</h2>
-              <p>
-                Explore our exclusive wallpapers for your devices. Download
-                wallpapers for iPhone, Mac, and iPad below!
-              </p>
-              {wallpapers.map(wallpaper => (
-                <div key={wallpaper.id} className="wallpaper-item">
-                  <h3>{wallpaper.name}</h3>
-
+              {/* OSS 1 */}
+              <article className="project-card">
+                <h3>
+                  <a className="regular-link" href="#" onClick={e => e.preventDefault()}>
+                    ebl-design-tokens
+                  </a>
+                </h3>
+                <p>
+                  Cross-platform design tokens for color, type, and spacing — JSON first,
+                  with build outputs for CSS variables, iOS, and Android.
+                </p>
+                <a href="#" onClick={e => e.preventDefault()}>
                   <img
-                    src={wallpaper.imgSrc}
-                    alt={wallpaper.name}
-                    className="wallpaper-image"
+                    className="projects-image"
+                    src={PLACEHOLDER_IMG}
+                    alt="ebl-design-tokens — placeholder repository image"
                   />
-                  <div className="wallpaper-buttons">
-                    <a
-                      href={wallpaper.downloadLinks.tablet}
-                      download
-                      className="download-button"
-                    >
-                      Download iPad
-                    </a>
-                    <a
-                      href={wallpaper.downloadLinks.desktop}
-                      download
-                      className="download-button"
-                    >
-                      Download Mac
-                    </a>
-                    <a
-                      href={wallpaper.downloadLinks.phone}
-                      download
-                      className="download-button"
-                    >
-                      Download iPhone
-                    </a>
-                  </div>
+                </a>
+                <p><b>Category:</b> UI/UX, Theming</p>
+                <p><b>Technology:</b> JSON, Style Dictionary, CSS</p>
+                <div className="social-links">
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="GitHub">
+                    <i className="fab fa-github"></i>
+                  </a>
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="Docs">
+                    <i className="fa-solid fa-book"></i>
+                  </a>
                 </div>
-              ))}
-            </div>
+              </article>
+              <hr />
+
+              {/* OSS 2 */}
+              <article className="project-card">
+                <h3>
+                  <a className="regular-link" href="#" onClick={e => e.preventDefault()}>
+                    sunrise-starter
+                  </a>
+                </h3>
+                <p>
+                  A batteries-included app starter with auth, theming, forms, routing,
+                  and testing — so you can ship before lunch.
+                </p>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  <img
+                    className="projects-image"
+                    src={PLACEHOLDER_IMG}
+                    alt="sunrise-starter — placeholder repository image"
+                  />
+                </a>
+                <p><b>Category:</b> Boilerplate, Starter Kit</p>
+                <p><b>Technology:</b> React, Vite, Testing Library</p>
+                <div className="social-links">
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="GitHub">
+                    <i className="fab fa-github"></i>
+                  </a>
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="External link">
+                    <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+                  </a>
+                </div>
+              </article>
+              <hr />
+
+              {/* OSS 3 */}
+              <article className="project-card">
+                <h3>
+                  <a className="regular-link" href="#" onClick={e => e.preventDefault()}>
+                    roost-cli
+                  </a>
+                </h3>
+                <p>
+                  A tiny CLI for generating opinionated project scaffolds — linted,
+                  formatted, and ready to push.
+                </p>
+                <a href="#" onClick={e => e.preventDefault()}>
+                  <img
+                    className="projects-image"
+                    src={PLACEHOLDER_IMG}
+                    alt="roost-cli — placeholder repository image"
+                  />
+                </a>
+                <p><b>Category:</b> Developer Tools</p>
+                <p><b>Technology:</b> Node.js, TypeScript</p>
+                <div className="social-links">
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="GitHub">
+                    <i className="fab fa-github"></i>
+                  </a>
+                  <a href="#" onClick={e => e.preventDefault()} aria-label="NPM">
+                    <i className="fa-brands fa-npm"></i>
+                  </a>
+                </div>
+              </article>
+              <hr />
+            </section>
           )}
 
           {selectedSection === "content" && (
-            <div className="product-section">
+            <section className="product-section" aria-labelledby="upcoming-content">
               <h2 id="upcoming-content">Upcoming Content</h2>
               <p>
-                <b>At Night Owl Labs</b>, we're always looking forward to
-                providing valuable insights and resources to our community. In
-                the near future, you can expect some big things:
+                <b>At Early Bird Labs</b>, we publish practical guides and templates
+                for indie devs and small teams. What’s cooking:
               </p>
               <ul>
-                <li>
-                  Comprehensive tutorials (articles/videos) on emerging
-                  technologies
-                </li>
-                <li>Case studies of our recent projects</li>
-                <li>Papers and publications on our upcoming products</li>
-                <li>Podcasts and interviews with industry leaders</li>
-                <li>Webinars on best practices in software development</li>
-                <li>Reviews of new development tools and platforms</li>
-                <li>Guides on business strategy and digital transformation</li>
-                <li>
-                  Books, eBooks, and Courses on both business and software
-                  development topics
-                </li>
-                <li>
-                  An online forum and Discourse server for community
-                  interactions
-                </li>
-                <li>An online gift shop with official NOL merchandise!</li>
+                <li>“Shipping Before Sunrise” — a series on tiny product launches</li>
+                <li>Design tokens starter kit (with docs & examples)</li>
+                <li>CI templates for web and mobile apps</li>
+                <li>Case studies on performance and accessibility wins</li>
+                <li>Short videos on developer ergonomics & UX patterns</li>
               </ul>
-              <p>
-                <b>Stay Tuned!</b> We're excited to share these resources with
-                you soon.
-              </p>
-              <p>
-                <b>FYI:</b> If you find yourself on our{" "}
-                <a className="regular-link" href="/coming-soon">
-                  Coming Soon
-                </a>{" "}
-                page, you know we're close to releasing a new product!
-              </p>
+              <p><b>Stay tuned!</b> New posts drop with the first cup of coffee. ☕</p>
               <hr />
-            </div>
+            </section>
           )}
         </div>
       </div>

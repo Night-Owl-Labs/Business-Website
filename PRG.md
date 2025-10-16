@@ -15,7 +15,7 @@ This file is used to connect this repository to the **PRG** project categorizati
 **Repository Tier:** Gold <br>
 **Technology:** Gatsby.js, Netlify, React, JavaScript, HTML, CSS <br>
 **Category:** SPA, Business Website <br>
-**Order:** 7 <br>
+**Order:** 1 <br>
 
 ## Parameters
 

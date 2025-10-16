@@ -10,67 +10,29 @@ const Footer = () => {
       <div id="pagefoot" style={{ display: showFooter ? "block" : "none" }}>
         <div className="social-links-wrapper">
           <div className="social-links-footer">
-            <a
-              href="https://www.linkedin.com/company/nightowllabs"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="https://twitter.com/night_owl_labs"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-x-twitter"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/night.owl.labs"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-            <a
-              href="https://reciperesizer.com"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
               <i className="fa-brands fa-app-store-ios"></i>
             </a>
-            <a
-              href="https://marketplace.visualstudio.com/publishers/night-owl-labs"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
               <Icon name="VSCode" />
             </a>
-            <a
-              href="https://github.com/Night-Owl-Labs"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
               <i className="fab fa-github"></i>
             </a>
-            <a
-              href="https://github.com/scottgriv/business-website"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-solid fa-code-fork"></i>
+            <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
+              <i className="fab fa-linkedin"></i>
             </a>
-            <a
-              href="mailto:info@nightowllabs.io"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-regular fa-envelope"></i>
+            <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
+              <i className="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
+              <i className="fa-brands fa-instagram"></i>
             </a>
           </div>
         </div>
         <div id="pagefoot">
-          Copyright © 2014-{new Date().getFullYear()} Night Owl Labs, LLC. - All
-          Rights Reserved.
+          Copyright © 2025-{new Date().getFullYear()} Early Bird Labs, LLC. -
+          All Rights Reserved.
         </div>
       </div>
     </>
