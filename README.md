@@ -1,6 +1,6 @@
 <!-- Begin README -->
 
-[![App Logo](docs/images/banner_large.png)](https://bizwebsite.netlify.app)
+[![App Logo](docs/images/banner_large_biz.png)](https://bizwebsite.netlify.app)
 
 <p align="center">
     <a href="https://www.gatsbyjs.com/"><img src="https://img.shields.io/badge/Gatsby-5.12.4-663399?style=for-the-badge&logo=gatsby" alt="Gatsby Badge" /></a>
@@ -155,7 +155,7 @@ Below is a list of the main files you can customize to your liking:
     - Make sure you also update the `src/components/header.js` file to include your new pages in the navigation menu.
 9. In the root directory, you can also edit the `gatsby-config.js` file to change the site metadata and other settings.
 10. Also in the root directory, you will find another directory called `static`. This directory contains the `fonts` and `images` folders. You can use the `fonts` folder to store your custom fonts and the `images` folder to store your custom images used throughout the site.
-11. Be sure to update your `<a href="#">` link tags to actual endpoints, they're set to dead ends in the site demo.
+11. Be sure to update your `<a href="#">` link tags to actual endpoints, they're set to dead ends in the site demo. Also, remove the `onClick={e => e.preventDefault()` javascript from your hyperlink `<a>` tags, which prevents links from opening.
 
 > [!IMPORTANT]
 > Please follow the [Guidelines for Forking This Project](#guidelines-for-forking-this-project) below if you plan on forking and using this project for your own purposes.

@@ -29,7 +29,7 @@ body {
   font-family: "Inter", Arial, sans-serif; /* Use custom font */
   font-weight: 400; /* This will use the regular font */
   font-size: 20px; /* Set default font size */
-  background-color: #8ED8F8;
+  background-color: #8ed8f8;
   color: black;
   margin: 0;
   display: flex;
@@ -54,7 +54,7 @@ h6 {
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
-  font-size: 25px
+  font-size: 25px;
 }
 
 footer {
@@ -62,11 +62,11 @@ footer {
 }
 
 a {
-  color: #F48C06; /* Yellow links */
+  color: #f48c06; /* Yellow links */
 }
 
 .coming-soon-container {
-  background-color: #F48C06; /* Solid yellow background */
+  background-color: #f48c06; /* Solid yellow background */
   color: #333; /* Text color - adjust as needed */
   text-align: center; /* Center align the content */
   min-height: 85vh; /* Ensure it covers the whole viewport height */
@@ -85,12 +85,18 @@ a {
   font-family: "Tally-Text", Arial, sans-serif; /* Use custom font */
 }
 
-.desktop-logo,
-.mobile-logo {
+.desktop-logo {
   max-width: 100%; /* To make sure image never exceeds its parent width */
   height: auto; /* Maintains the aspect ratio */
   border-top-left-radius: 10px; /* Top left corner */
   border-top-right-radius: 10px; /* Top right corner */
+}
+
+.mobile-logo {
+  max-width: 100%; /* To make sure image never exceeds its parent width */
+  height: auto; /* Maintains the aspect ratio */
+  border-top-left-radius: 5px; /* Top left corner */
+  border-top-right-radius: 5px; /* Top right corner */
 }
 
 .landing-logo {
@@ -126,11 +132,11 @@ a {
   margin-bottom: 0;
 }
 .landing-subtitle {
-  color: #F48C06;
+  color: #f48c06;
 }
 
 #pagecontent {
-  background-color: #FFF8E1;
+  background-color: #fff8e1;
   padding: 0;
   border-radius: 10px;
   text-align: center;
@@ -163,7 +169,7 @@ a {
   font-family: "Inter", Arial, sans-serif; /* Use custom font */
   font-weight: 700; /* This will use the bold font */
   font-size: 16px; /* Set default font size */
-  background-color: #F48C06;
+  background-color: #f48c06;
   color: white;
   padding: 8px 12px;
   text-decoration: none;
@@ -173,7 +179,7 @@ a {
 
 /* This is to ensure that hover links retain the intended style */
 #menutabs a:hover {
-  background-color: #FFD94A;
+  background-color: #ffd94a;
   color: black;
 }
 
@@ -184,7 +190,7 @@ a {
 
 /* Specific rule for visited links when hovered */
 #menutabs a:visited:hover {
-    background-color: #FFD94A;
+  background-color: #ffd94a;
   color: black;
 }
 
@@ -192,7 +198,7 @@ a {
 #menutabs a.active,
 #menutabs a.active:hover,
 #menutabs a.active:visited {
-  background-color: #81C784;
+  background-color: #81c784;
   color: white;
 }
 
@@ -254,7 +260,7 @@ a {
 }
 
 #github-star {
-  color: #F48C06;
+  color: #f48c06;
 }
 
 #github-fork {
@@ -295,14 +301,14 @@ a {
 
 .social-links a,
 .social-links-footer a {
-  color: #E63946; /* Icon color */
+  color: #e63946; /* Icon color */
   font-size: 24px; /* Icon size */
   transition: transform 0.3s ease; /* Smooth transition for the transform */
 }
 
 .social-links a:hover,
 .social-links-footer a:hover {
-  color: #1A237E; /* Green color for links hover effect, change as needed */
+  color: #1a237e; /* Green color for links hover effect, change as needed */
   transform: translateY(-5px); /* Moves the button up */
 }
 
@@ -321,7 +327,7 @@ a {
 }
 
 .social-links-owl a:hover {
-  color: #FFD94A; /* Green color for links hover effect, change as needed */
+  color: #ffd94a; /* Green color for links hover effect, change as needed */
   transform: translateY(-5px); /* Moves the button up */
 }
 
@@ -360,7 +366,7 @@ a {
 }
 
 .sidebar button {
-  background-color: #F48C06;
+  background-color: #f48c06;
   color: white;
   padding: 8px 12px;
   text-decoration: none;
@@ -385,14 +391,14 @@ a {
 
 /* This is to ensure that hover links retain the intended style */
 .sidebar button:hover {
-  background-color: #FFD94A;
+  background-color: #ffd94a;
   color: black;
 }
 
 /* Higher specificity for active links */
 .sidebar button.active,
 .sidebar button.active:hover {
-  background-color: #81C784;
+  background-color: #81c784;
   color: white;
 }
 
@@ -406,7 +412,7 @@ a {
 }
 /* This is to ensure that hover links retain the intended style */
 .coming-soon-link:hover {
-  color: #FFD94A;
+  color: #ffd94a;
 }
 
 /* This is to ensure that visited links retain the intended style */
@@ -416,17 +422,17 @@ a {
 
 /* Specific rule for visited links when hovered */
 .coming-soon-link:visited:hover {
-  color: #FFD94A;
+  color: #ffd94a;
 }
 
 /* This is to ensure that hover links retain the intended style */
 
 .regular-link {
-  color: #F48C06;
+  color: #f48c06;
 }
 
 .regular-link:hover {
-  color: #E63946;
+  color: #e63946;
 }
 
 @keyframes bounce {
@@ -632,21 +638,6 @@ button:focus {
   transform: scale(1.06); /* Enlarge the icon on hover */
 }
 
-  /* Add border to images due to a black background */
-.icon-container[href="https://post-e.netlify.app/"] img, 
-.icon-container[href="https://darkcastle.netlify.app/"] img
-{
-  border: 2px solid rgb(46, 46, 46);
-  border-radius: 45px;
-}
-
-.icon-container-product[href="https://github.com/Night-Owl-Labs/Software-Principles-Collection"] img,
-.icon-container-product[href="https://darkcastle.netlify.app/"] img
-{
-  border: 2px solid rgb(46, 46, 46);
-  border-radius: 30px;
-}
-
 .fork-links {
   text-align: center;
   margin-top: 10px;
@@ -659,7 +650,7 @@ button:focus {
 
 /* Scrolling Popup Arrow Button */
 .scroll-to-top {
-  background: #FFD94A;
+  background: #ffd94a;
   border: none;
   border-radius: 50%; /* Makes it a circle */
   padding: 0;
@@ -740,8 +731,8 @@ button:focus {
 }
 
 .download-button {
-  background-color: #FFD94A;
-  color: #FFFFFF;
+  background-color: #ffd94a;
+  color: #ffffff;
   font-weight: bold;
   border-radius: 20px; /* Rounded corners */
   padding: 2px 8px;
@@ -758,7 +749,7 @@ button:focus {
 }
 
 .download-button:hover {
-  background-color: #0E2F00;
+  background-color: #0e2f00;
 }
 
 /* For WebKit browsers (Chrome, Safari, etc.) */
@@ -771,7 +762,7 @@ button:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #F48C06; /* Color of the scrollbar thumb */
+  background-color: #f48c06; /* Color of the scrollbar thumb */
   border-radius: 6px; /* Roundness of the scrollbar thumb */
   border: 3px solid #000000; /* Padding around scrollbar thumb */
 }
@@ -779,14 +770,13 @@ button:focus {
 /* For Firefox */
 * {
   scrollbar-width: thin; /* Makes the scrollbar thinner */
-  scrollbar-color: #F48C06 #000000; /* Thumb and track colors */
+  scrollbar-color: #f48c06 #000000; /* Thumb and track colors */
 }
 
 /* For Internet Explorer and Edge */
 body {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-
 
 /* Media Queries */
 /* When screen width is less than 768px, hide elements with the 'responsive-hide' class */
@@ -827,15 +817,6 @@ body {
   /* Show the "Us" and "NOL" in About and Contact nav items*/
   .responsive-hide {
     display: inline;
-  }
-
-  /* Round the images due to a black background */
-  .icon-container[href="https://post-e.netlify.app/"] img,
-  .icon-container[href="https://darkcastle.netlify.app/"] img,
-  .icon-container-product[href="https://github.com/Night-Owl-Labs/Software-Principles-Collection"] img,
-  .icon-container-product[href="https://darkcastle.netlify.app/"] img
-  {
-    border-radius: 30px;
   }
 
   body {
@@ -977,5 +958,4 @@ body {
       8%
     ); /* Adjust width to fit 5 items per row, accounting for gap */
   }
-  
 }

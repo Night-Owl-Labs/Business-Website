@@ -71,8 +71,10 @@ export default function Services() {
 
       <p>
         Have something specific in mind?{" "}
-        <a className="regular-link" href="/contact">Contact</a> us with a brief,
-        and we’ll suggest a right-sized path to launch.
+        <a className="regular-link" href="/contact">
+          Contact
+        </a>{" "}
+        us with a brief, and we’ll suggest a right-sized path to launch.
       </p>
     </Layout>
   )

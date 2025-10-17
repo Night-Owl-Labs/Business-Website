@@ -12,15 +12,19 @@ export default function About() {
       <p>
         <strong>Early Bird Labs</strong> started as a tiny studio that loved
         building small, useful tools and sharing them with the world. Today we
-        remain a compact, nimble collective focused on open-source, good UX,
-        and pragmatic engineering.
+        remain a compact, nimble collective focused on open-source, good UX, and
+        pragmatic engineering.
       </p>
 
       <hr />
 
-      <section className="about-container" id="sam-sunrise" aria-labelledby="sam-name">
+      <section
+        className="about-container"
+        id="sam-sunrise"
+        aria-labelledby="sam-name"
+      >
         <div className="photo-container">
-          <a href="#" rel="noreferrer">
+          <a href="#" rel="noreferrer" onClick={e => e.preventDefault()}>
             <img
               className="about-image"
               src="/images/brand/early_birb.png"
@@ -30,7 +34,12 @@ export default function About() {
         </div>
 
         <div className="description-container">
-          <a className="regular-link" href="#" rel="noreferrer">
+          <a
+            className="regular-link"
+            href="#"
+            rel="noreferrer"
+            onClick={e => e.preventDefault()}
+          >
             <h2 id="sam-name">Sam Sunrise</h2>
           </a>
           <h3>Founder · Product · Front-end</h3>
@@ -42,22 +51,40 @@ export default function About() {
           </p>
 
           <div className="social-links">
-            <a href="#" aria-label="Email Sam">
+            <a
+              href="#"
+              aria-label="Email Sam"
+              onClick={e => e.preventDefault()}
+            >
               <i className="fa-regular fa-envelope"></i>
             </a>
-            <a href="#" aria-label="Sam's GitHub" nClick={e => e.preventDefault()} rel="noreferrer">
+            <a
+              href="#"
+              aria-label="Sam's GitHub"
+              onClick={e => e.preventDefault()}
+              rel="noreferrer"
+            >
               <i className="fab fa-github"></i>
             </a>
-            <a href="#" aria-label="Sam's X" nClick={e => e.preventDefault()} rel="noreferrer">
+            <a
+              href="#"
+              aria-label="Sam's X"
+              onClick={e => e.preventDefault()}
+              rel="noreferrer"
+            >
               <i className="fa-brands fa-x-twitter"></i>
             </a>
           </div>
         </div>
       </section>
 
-      <section className="about-container-flipped" id="jo-jonquil" aria-labelledby="jo-name">
+      <section
+        className="about-container-flipped"
+        id="jo-jonquil"
+        aria-labelledby="jo-name"
+      >
         <div className="photo-container">
-          <a href="#" nClick={e => e.preventDefault()} rel="noreferrer">
+          <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
             <img
               className="about-image"
               src="/images/brand/early_birb.png"
@@ -67,7 +94,12 @@ export default function About() {
         </div>
 
         <div className="description-container">
-          <a className="regular-link" href="#" nClick={e => e.preventDefault()} rel="noreferrer">
+          <a
+            className="regular-link"
+            href="#"
+            onClick={e => e.preventDefault()}
+            rel="noreferrer"
+          >
             <h2 id="jo-name">Jo Jonquil</h2>
           </a>
           <h3>Design Lead · UX · Brand</h3>
@@ -79,19 +111,33 @@ export default function About() {
           </p>
 
           <div className="social-links">
-            <a href="#" aria-label="Jo's Instagram">
+            <a
+              href="#"
+              aria-label="Jo's Instagram"
+              onClick={e => e.preventDefault()}
+              rel="noreferrer"
+            >
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" aria-label="Jo's LinkedIn" nClick={e => e.preventDefault()} rel="noreferrer">
+            <a
+              href="#"
+              aria-label="Jo's LinkedIn"
+              onClick={e => e.preventDefault()}
+              rel="noreferrer"
+            >
               <i className="fab fa-linkedin"></i>
             </a>
           </div>
         </div>
       </section>
 
-      <section className="about-container" id="ravi-roost" aria-labelledby="ravi-name">
+      <section
+        className="about-container"
+        id="ravi-roost"
+        aria-labelledby="ravi-name"
+      >
         <div className="photo-container">
-          <a href="#" nClick={e => e.preventDefault()} rel="noreferrer">
+          <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
             <img
               className="about-image"
               src="/images/brand/early_birb.png"
@@ -101,7 +147,12 @@ export default function About() {
         </div>
 
         <div className="description-container">
-          <a className="regular-link" href="#" nClick={e => e.preventDefault()} rel="noreferrer">
+          <a
+            className="regular-link"
+            href="#"
+            onClick={e => e.preventDefault()}
+            rel="noreferrer"
+          >
             <h2 id="ravi-name">Ravi Roost</h2>
           </a>
           <h3>Platform · APIs · DevOps</h3>
@@ -112,10 +163,20 @@ export default function About() {
           </p>
 
           <div className="social-links">
-            <a href="#" aria-label="Ravi's GitHub" nClick={e => e.preventDefault()} rel="noreferrer">
+            <a
+              href="#"
+              aria-label="Ravi's GitHub"
+              onClick={e => e.preventDefault()}
+              rel="noreferrer"
+            >
               <i className="fab fa-github"></i>
             </a>
-            <a href="#" aria-label="Ravi's Mastodon" nClick={e => e.preventDefault()} rel="noreferrer">
+            <a
+              href="#"
+              aria-label="Ravi's Mastodon"
+              onClick={e => e.preventDefault()}
+              rel="noreferrer"
+            >
               <i className="fab fa-mastodon"></i>
             </a>
           </div>
@@ -127,9 +188,9 @@ export default function About() {
       <h2>Ready to join our Flock of Birds?</h2>
       <p>
         We deliberately keep the team small and focused. If you're excited by
-        delightful tooling, thoughtful design, or open-source work, we'd love
-        to hear from you — even if there's no active opening. Tell us what you
-        love to build and how you'd like to contribute.
+        delightful tooling, thoughtful design, or open-source work, we'd love to
+        hear from you — even if there's no active opening. Tell us what you love
+        to build and how you'd like to contribute.
       </p>
 
       <p>

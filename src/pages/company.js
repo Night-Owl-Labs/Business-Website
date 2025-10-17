@@ -48,17 +48,15 @@ export default function Company() {
       <blockquote className="block-quote">
         <p>
           “We design and build software that inspires creativity, simplifies
-          complexity, and brings a sense of calm focus to the start of your
-          day. Whether it’s an app, a tool, or a system, our mission is to help
+          complexity, and brings a sense of calm focus to the start of your day.
+          Whether it’s an app, a tool, or a system, our mission is to help
           people do their best work with clarity and confidence.”
         </p>
       </blockquote>
 
       <hr />
 
-      <p>
-        Want to collaborate or learn more about what we’re building?
-      </p>
+      <p>Want to collaborate or learn more about what we’re building?</p>
       <p>
         <a className="regular-link" href="/contact">
           Get in touch

@@ -42,13 +42,19 @@ function Seo({ description, title, children }) {
       <meta name="robots" content="index, follow" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" content="/images/company/nol-banner_social.png" />
+      <meta
+        property="og:image"
+        content="/images/company/nol-banner_social.png"
+      />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={site.siteMetadata?.author || ""} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content="/images/company/nol-banner_social.png" />
+      <meta
+        name="twitter:image"
+        content="/images/company/nol-banner_social.png"
+      />
       <meta name="msapplication-TileColor" content="#0E2F00" />
       <meta name="theme-color" content="#0E2F00" />
       <meta name="mobile-web-app-capable" content="yes" />
@@ -56,14 +62,14 @@ function Seo({ description, title, children }) {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       />
-      
+
       {/* Favicon icons */}
       <link rel="icon" type="image/x-icon" href={faviconIco} />
       <link rel="icon" type="image/png" sizes="96x96" href={favicon96} />
       <link rel="icon" type="image/png" sizes="192x192" href={favicon192} />
       <link rel="icon" type="image/png" sizes="512x512" href={favicon512} />
 
-        {/* App install (not a favicon) */}
+      {/* App install (not a favicon) */}
       <link rel="apple-touch-icon" href={appleIcon} />
 
       {children}

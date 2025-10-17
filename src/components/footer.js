@@ -11,12 +11,6 @@ const Footer = () => {
         <div className="social-links-wrapper">
           <div className="social-links-footer">
             <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
-              <i className="fa-brands fa-app-store-ios"></i>
-            </a>
-            <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
-              <Icon name="VSCode" />
-            </a>
-            <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
               <i className="fab fa-github"></i>
             </a>
             <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
@@ -27,6 +21,14 @@ const Footer = () => {
             </a>
             <a href="#" onClick={e => e.preventDefault()} rel="noreferrer">
               <i className="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://github.com/scottgriv/Business-Website"
+              rel="noreferrer"
+              target="_blank"
+              style={{ display: "inline-flex", width: 23, height: 23 }}
+            >
+              <Icon name="Fork" />
             </a>
           </div>
         </div>
