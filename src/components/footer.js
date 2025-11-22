@@ -23,7 +23,7 @@ const Footer = () => {
               <i className="fa-brands fa-instagram"></i>
             </a>
             <a
-              href="https://github.com/scottgriv/Business-Website"
+              href="https://github.com/Night-Owl-Labs/Business-Website"
               rel="noreferrer"
               target="_blank"
               style={{ display: "inline-flex", width: 23, height: 23 }}

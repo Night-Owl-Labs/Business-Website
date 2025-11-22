@@ -125,7 +125,7 @@ export default function Contact() {
           &nbsp;
           <a
             className="regular-link"
-            href="https://github.com/scottgriv/business-website"
+            href="https://github.com/Night-Owl-Labs/business-website"
             target="_blank"
             rel="noreferrer"
           >
