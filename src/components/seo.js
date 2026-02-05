@@ -44,7 +44,7 @@ function Seo({ description, title, children }) {
       <meta property="og:description" content={metaDescription} />
       <meta
         property="og:image"
-        content="/images/company/nol-banner_social.png"
+        content="/images/company/banner_social.png"
       />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -53,7 +53,7 @@ function Seo({ description, title, children }) {
       <meta name="twitter:description" content={metaDescription} />
       <meta
         name="twitter:image"
-        content="/images/company/nol-banner_social.png"
+        content="/images/company/banner_social.png"
       />
       <meta name="msapplication-TileColor" content="#0E2F00" />
       <meta name="theme-color" content="#0E2F00" />
